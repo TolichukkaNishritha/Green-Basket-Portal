@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+<title>Green | basket</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/style.css'%}">
+<script src="{%static 'js/jquery-1.7.1.min.js'%}"></script>
+<script src="{%static 'js/superfish.js'%}"></script>
+<script src="{%static 'js/jquery.easing.1.3.js'%}"></script>
+<script src="{%static 'js/tms-0.4.1.js'%}"></script>
+<script src="{%static 'js/slider.js'%}"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="{%static 'css/ie.css'%}">
+<![endif]-->
+</head>
+<body>
+<div class="main-bg">
+  <!-- Header -->
+  <header>
+    <div class="inner">
+     <h1><a href="">Green Basket</a></h1>
+      <nav>
+        <ul class="sf-menu">
+          <li class="current"><a href="/">home</a></li>
+          <li><a href="/login">Customer</a></li>
+          <li> <a href="/farmerapp/login">Farmer</a>  </li>
+
+          <li><a href="/deliveryapp/login">Delivery</a></li>
+          <li><a href="/adminapp/login">Admin</a></li>
+        </ul>
+      </nav>
+      <div class="clear"></div>
+    </div>
+    <div class="slider-container">
+      <div class="mp-slider">
+        <ul class="items">
+          <li><img src="{%static 'images/agri.jpg'%}" alt="">
+            <div class="banner mp-ban-1"><span class="row-1">putting our</span><span class="row-2">heart &amp; soul</span><span class="row-3">into the field</span></div>
+          </li>
+          <li><img src="{%static 'images/slide-2.jpg'%}" alt="">
+            <div class="banner mp-ban-2"><span class="row-1">we have a strong</span><span class="row-2">agriculture</span><span class="row-3">heritage</span></div>
+          </li>
+          <li><img src="{%static 'images/slide-3.jpg'%}" alt="">
+            <div class="banner mp-ban-3"><span class="row-1">growing clean</span><span class="row-2">and full of health</span><span class="row-3">products</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="#" class="mp-prev"></a> <a href="#" class="mp-next"></a> </header>
+  <!-- Content -->
+  <section id="content">
+    <div class="container_24">
+      <div class="wrapper">
+        <div class="grid_24 content-bg">
+          <div class="wrapper">
+            <div class="grid_16 suffix_1 prefix_1 alpha">
+              <article class="indent-bot">
+
+                <div class="wrapper hr-border-1">
+
+
+
+                </div>
+
+              </article>
+              <article class="banner-box">
+                <div class="inner">
+                  <font color="red">{{msg}}</font>
+              <h2>Delivery Register:</h2>
+              <div class="wrapper hr-border-1"> <span class="dropcap"> </span>
+
+               <form action="/deliveryapp/RegAction/" method="post">
+                  {%csrf_token%}
+                <table>
+                    <tr><th>Name</th><td><input type="text" name="name" required></td></tr>
+                  <tr><th>Email</th><td><input type="email" name="email" required></td></tr>
+                  <tr><th>Mobile</th><td><input type="number" name="mobile" required></td></tr>
+                  <tr><th>Location</th><td><input type="text" name="address" required></td></tr>
+                 <tr><th>UserName</th><td><input type="text" name="username" required></td></tr>
+                  <tr><th>Password</th><td><input type="password" name="password" required></td></tr>
+                  <tr><th></th><td><input type="submit" value="Register" required>
+                  <input type="reset" value="Reset" required></td></tr>
+                  <tr><th></th><td>Already Have An Account ? <a href="/deliveryapp/login">Login</a></td></tr>
+                </table>
+                  </form>
+                </div>
+                <img src="images/banner-box-img.png" alt="" class="banner-box-img">
+            </div>
+            <div class="grid_5 suffix_1 omega">
+
+              <article>
+
+
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container_24">
+      <div class="wrapper">
+        <div class="grid_24 footer-bg">
+          <div class="hr-border-2"></div>
+          <div class="wrapper">
+            <div class="grid_7 suffix_1 prefix_1 alpha">
+
+            </div>
+            <div class="grid_4">
+
+
+            </div>
+            <div class="grid_4">
+
+
+            </div>
+            <div class="grid_4">
+
+
+            </div>
+            <div class="grid_2 suffix_1 omega">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

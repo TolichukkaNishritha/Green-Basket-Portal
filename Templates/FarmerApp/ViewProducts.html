@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+<title>Green | basket</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/style.css'%}">
+  <link rel="stylesheet" href="{%static 'tablestyle.css'%}" type="text/css">
+<script src="{%static 'js/jquery-1.7.1.min.js'%}"></script>
+<script src="{%static 'js/superfish.js'%}"></script>
+<script src="{%static 'js/jquery.easing.1.3.js'%}"></script>
+<script src="{%static 'js/tms-0.4.1.js'%}"></script>
+<script src="{%static 'js/slider.js'%}"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="{%static 'css/ie.css'%}">
+<![endif]-->
+</head>
+<body>
+<div class="main-bg">
+  <!-- Header -->
+  <header>
+    <div class="inner">
+     <h1><a href="/">Green Basket</a></h1>
+      <nav>
+        <ul class="sf-menu">
+          <li class="current"><a href="/farmerapp/Home">home</a></li>
+          <li><a href="/farmerapp/AddProducts">Add Product</a></li>
+          <li> <a href="/farmerapp/viewproducts">View Products</a>  </li>
+
+          <li><a href="/farmerapp/BookingRequest">View Booking Request</a></li>
+          <li><a href="/farmerapp/login">Logout</a></li>
+        </ul>
+      </nav>
+      <div class="clear"></div>
+    </div>
+  </header>
+  <!-- Content -->
+  <section id="content">
+    <div class="container_24">
+      <div class="wrapper">
+        <div class="grid_24 content-bg">
+          <div class="wrapper"  style="height:500px;background:green;">
+
+          <center>
+             <h2>View All Products Price Details</h2>
+
+            {{data | safe}}
+            <hr>
+
+          </center>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+
+</div>
+</body>
+</html>
